@@ -1,0 +1,21 @@
+services:
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password@2"
+    platform: "linux/amd64"
+    ports:
+      - "1433:1433"
+      
+  # Uncomment when ready to containerize the web application
+  # web:
+  #   build: .
+  #   container_name: contacts-manager
+  #   ports:
+  #     - "8080:80"
+  #   depends_on:
+  #     - sql
+  #   environment:
+  #     - ConnectionStrings__DefaultConnection=Server=sql,1433;Database=ContactsManager;User Id=sa;Password=Password@2;TrustServerCertificate=True
