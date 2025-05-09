@@ -2,6 +2,9 @@
 
 A comprehensive contact management application built with clean architecture principles and ASP.NET Core MVC.
 
+![ContactsManager](https://github.com/user-attachments/assets/17942249-a18d-4664-8ea8-2449e8d274f6)
+
+
 ## Architecture Overview
 
 ```
